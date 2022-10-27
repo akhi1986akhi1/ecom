@@ -1,0 +1,81 @@
+{
+  "seller": [
+    {
+      "id": 1,
+      "name": "Akhil",
+      "email": "akhi1986@hotmail.com",
+      "password": "abc@123"
+    },
+    {
+      "name": "Anil Siddhu",
+      "email": "abc@gmail.com",
+      "password": "abc@123",
+      "id": 2
+    },
+    {
+      "email": "pankajmishra@gmail.com",
+      "password": "123456",
+      "id": 3
+    },
+    {
+      "email": "pankajmishra@gmail.com",
+      "password": "123456",
+      "id": 4
+    },
+    {
+      "email": "pankajmishra@gmail.com",
+      "password": "123456",
+      "id": 5
+    },
+    {
+      "email": "pankajmishra@gmail.com",
+      "password": "123456",
+      "id": 6
+    },
+    {
+      "email": "pankajmishra@gmail.com",
+      "password": "123456",
+      "id": 7
+    },
+    {
+      "email": "pankajmishra@gmail.com",
+      "password": "123456",
+      "id": 8
+    },
+    {
+      "email": "pankajmishra@gmail.com",
+      "password": "123456",
+      "id": 9
+    },
+    {
+      "email": "pankajmishra@gmail.com",
+      "password": "123456",
+      "id": 10
+    },
+    {
+      "email": "pankajmishra@gmail.com",
+      "password": "123456",
+      "id": 11
+    },
+    {
+      "email": "pankajmishra@gmail.com",
+      "password": "123456",
+      "id": 12
+    },
+    {
+      "email": "abc@gmail.com",
+      "password": "abc@123",
+      "id": 13
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
