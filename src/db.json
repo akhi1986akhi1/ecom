@@ -68,11 +68,24 @@
       "id": 13
     }
   ],
-  "comments": [
+  "products": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "some comment",
+      "category": "",
+      "subCategory": "",
+      "description": "",
+      "image": "",
+      "price": ""
+    },
+    {
+      "name": "Samsung",
+      "category": "Electronics",
+      "subCategory": "Mobile",
+      "description": "Mobile ohone",
+      "image": "product/mobile/phone",
+      "price": "11000",
+      "id": 2
     }
   ],
   "profile": {

@@ -5,7 +5,8 @@
 /tmp
 /out-tsc
 /bazel-out
-
+/food images
+/assets/food images
 # Node
 /node_modules
 npm-debug.log

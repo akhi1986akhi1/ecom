@@ -52,4 +52,8 @@ export class SellerService {
       }
     })
   }
+
+  addProductSeller(data:object){
+    return this.http.post("http://localhost:3000/products",data);
+  }
 }

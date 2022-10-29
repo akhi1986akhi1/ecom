@@ -1,1 +1,32 @@
-<p>seller-add-product works!</p>
+<div class="container d-flex justify-content-center mb-3">
+    <form #addForm="ngForm" class="w-50 mb-3" (ngSubmit)="addFormBtn(addForm.value)">
+
+        <h2>Add Product</h2>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Product Name</label>
+            <input type="text" class="form-control" name="name" ngModel>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Category</label>
+            <input type="text" class="form-control" name="category" ngModel>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Sub Category</label>
+            <input type="text" class="form-control" name="subCategory" ngModel>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Description</label>
+            <input type="text" class="form-control" name="description" ngModel>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Image</label>
+            <input type="text" class="form-control" name="image" ngModel>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Price</label>
+            <input type="text" class="form-control" name="price" ngModel>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button><br />
+    </form>
+</div>
