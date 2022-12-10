@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { products } from '../data-type';
+import { SellerService } from '../services/seller.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +11,9 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   menuType:String='default'
   sellerName:String='';
-  constructor(private route:Router) { }
+
+  searchResult:any;
+  constructor(private route:Router, private service:SellerService) { }
 
   ngOnInit(): void {
     this.route.events.subscribe((val:any)=>{
@@ -20,8 +24,11 @@ export class HeaderComponent implements OnInit {
           this.menuType='seller';
           if(localStorage.getItem("seller")){
             let sellerStore = localStorage.getItem("seller");
+            console.log(sellerStore)
             let sellerData = sellerStore && JSON.parse(sellerStore)[0];
+            console.log("seller data",sellerData)
             this.sellerName = sellerData.name;
+            console.log("seller name is",this.sellerName);
           }
 
         }else{
@@ -34,5 +41,22 @@ export class HeaderComponent implements OnInit {
   logout():void{
     localStorage.removeItem("seller");
     this.route.navigate(['/']);
+  }
+
+  searchProduct(query:KeyboardEvent){
+    
+  
+    if(query){
+      const element=query.target as HTMLInputElement;
+      console.log(element.value);
+      this.service.searchProductService(element.value).subscribe((result:any)=>{
+        console.log(result);
+        this.searchResult = result;
+      })
+    }
+  }
+
+  hideSearch(){
+    this.searchResult = undefined;
   }
 }

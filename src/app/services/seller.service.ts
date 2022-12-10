@@ -1,6 +1,6 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import { login, SignUp } from '../data-type';
+import { login, products, SignUp } from '../data-type';
 import { BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
 
@@ -53,7 +53,25 @@ export class SellerService {
     })
   }
 
-  addProductSeller(data:object){
+  addProductSeller(data:products){
     return this.http.post("http://localhost:3000/products",data);
   }
+  getAllProduct(){
+    return this.http.get<products>("http://localhost:3000/products");
+  }
+  getProuctById(id:products){
+    return this.http.get<products>(`http://localhost:3000/products/${id}`);
+  }
+  updateProductByID(product:products){
+    return this.http.put(`http://localhost:3000/products/${product.id}`,product);
+  }
+  removeProductByID(id:products){
+    return this.http.delete(`http://localhost:3000/products/${id}`);
+  }
+
+  searchProductService(query:string){
+    return this.http.get(`http://localhost:3000/products?q=${query}`);
+  }
+
 }
+

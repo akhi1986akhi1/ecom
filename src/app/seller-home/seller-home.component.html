@@ -1,1 +1,100 @@
-<p>seller-home works!</p>
+<div class="container-fluid">
+    <h1>Product List</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    #
+                </th>
+                <th>
+                    Image
+                </th>
+                <th>
+                    Product Name
+                </th>
+                <th>
+                    Category
+                </th>
+                <th>
+                    Sub-Category
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of productList; let i=index">
+                <td>
+                    {{i+1}}
+                </td>
+                <td>
+                    <div class="image-cnt">
+                        <img src="{{item.image}}" alt="">
+                        <div class="imageHide"><img src="{{item.image}}" alt=""></div>
+                    </div>
+                </td>
+                <td>
+                    {{item.name}}
+                </td>
+                <td>
+                    {{item.category}}
+                </td>
+                <td>
+                    {{item.subCategory}}
+                </td>
+                <td>
+                    {{item.description.slice(0,25)}} <span>...</span>
+                    <div class="des">{{item.description}}</div>
+                </td>
+                <td>
+                    {{item.price}}
+                </td>
+                <td>
+                    <!-- <button >Delete</button> -->
+                    <span class="sm-btn">
+                        <i class="bi bi-trash3" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+                    </span>
+                    <span class="sm-btn">
+                        <i class="bi bi-pencil-square" routerLink="/seller-update-product/{{item.id}}"></i>
+                    </span>
+                </td>
+                <!-- MODEL DELETE CONFIRM BOX -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Delete</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{{item.image}}" alt="">
+                          Are you sure to delete item <span style="font-weight:500 ;">{{item.name}}</span> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-danger" (click)="removeProduct(item.id)" data-bs-dismiss="modal">Delete</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button> -->
+  
+  <!-- Modal -->
+
+</div>

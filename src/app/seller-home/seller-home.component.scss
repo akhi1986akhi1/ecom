@@ -1,0 +1,124 @@
+.container-fluid{
+    .table{
+        tbody{
+            tr{
+                td{
+                    .sm-btn{
+                        display: inline-flex;
+                        padding: 5px;
+                        justify-content: center;
+                        align-items: center;
+                        background: rgba(247, 166, 192, 0.501);
+                        cursor: pointer;
+                        width:30px;
+                        height:30px;
+                        border-radius: 3px;
+                        color: red;
+                        text-shadow: 2px 2px 8px red;
+                        margin-right: 5px;
+                    }
+                    .sm-btn:nth-child(2){
+                        background: rgba(166, 189, 247, 0.501);
+                        color: rgb(0, 42, 255);
+                        text-shadow: 2px 2px 8px rgb(25, 0, 255);
+                    }
+                    img{
+                        width:50px;
+                        height:50px;
+                        padding: 3px;
+                        border: solid 1px lightgray;
+                        border-radius: 5px;
+                        box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.289);
+                    
+                    }
+                    .image-cnt{
+                        position: relative;
+                    }
+                }
+                td:nth-child(6){
+                    width:250px;
+                    position: relative;
+                    cursor: pointer;
+                    .des{
+                        transition: all 0.3s ease-in;
+                        opacity: 0;
+                        position: absolute;
+                  }
+
+                }
+                td:nth-child(2){
+                    .image-cnt{
+                        position: relative;
+                        width: fit-content;
+                        .imageHide{
+                            transition: all 0.4s ease-in;
+                            // display: none;
+                            opacity: 0;
+                            position: absolute;
+                            img{
+                                width:200px;
+                                height:150px;
+                            }
+                        }
+                    }
+
+                }
+                td:nth-child(6):hover{
+                    .des{
+                        transition: all 0.3s ease-in;
+                        display: block;
+                        position: absolute;
+                        background: rgba(211, 211, 211, 0.396);
+                        padding: 5px;
+                        border-radius: 5px;
+                        opacity: 1;
+                        backdrop-filter: blur(2px);
+                        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.221);
+
+                    }
+                }
+
+                td:nth-child(2){
+                    .image-cnt:hover{
+                        cursor: pointer;
+                        .imageHide{
+                            transition: all 0.4s ease-in;
+                            display: block;
+                            opacity: 1;
+                            position: absolute;
+                            z-index: +1;
+                            top:-20px;
+                            left:-20px;
+                            right:0;
+                        }
+                    }
+
+                }
+                
+                // td:nth-child(2):hover{
+                //     .des{
+                //         transition: all 0.2s ease-in;
+                //         display: block;
+                //         position: absolute;
+                //         background: rgba(211, 211, 211, 0.396);
+                //         padding: 0px;
+                //         border-radius: 5px;
+                //         opacity: 1;
+                //         backdrop-filter: blur(2px);
+                //         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.221);
+                //         z-index: +1;
+                        
+                //     }
+                // }
+             
+            }
+        }
+    }
+}
+.modal-body{
+    color: red;
+    img{
+        width:20px;
+        height: 20px;
+    }
+}

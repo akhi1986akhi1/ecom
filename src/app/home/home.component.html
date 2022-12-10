@@ -1,1 +1,137 @@
-<p>home works!</p>
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active bg-secondary" style="position: relative;">
+      <img src="../../assets/shoping image/img01.jpg" class="d-block w-100" alt="...">
+      <div class="product-crousal">
+        <div class="product-crousal-image">
+          imag
+        </div>
+        <div class="product-crousal-image">
+          imag2
+        </div>
+        <div class="product-crousal-image">
+          imag3
+        </div>
+        <div class="product-crousal-image">
+          imag4
+        </div>
+        <div class="product-crousal-image">
+          imag5
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item bg-secondary">
+      <img src="../../assets/shoping image/img02.jpg" class="d-block w-100" alt="...">
+      <div class="product-crousal">
+        <div class="product-crousal-image">
+          imag
+        </div>
+        <div class="product-crousal-image">
+          imag2
+        </div>
+        <div class="product-crousal-image">
+          imag3
+        </div>
+        <div class="product-crousal-image">
+          imag4
+        </div>
+        <div class="product-crousal-image">
+          imag5
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item bg-secondary">
+      <img src="../../assets/shoping image/img03.jpg" class="d-block w-100" alt="...">
+      <div class="product-crousal">
+        <div class="product-crousal-image">
+          imag
+        </div>
+        <div class="product-crousal-image">
+          imag2
+        </div>
+        <div class="product-crousal-image">
+          imag3
+        </div>
+        <div class="product-crousal-image">
+          imag4
+        </div>
+        <div class="product-crousal-image">
+          imag5
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item bg-secondary">
+      <img src="../../assets/shoping image/img04.jpg" class="d-block w-100" alt="...">
+      <div class="product-crousal">
+        <div class="product-crousal-image">
+          imag
+        </div>
+        <div class="product-crousal-image">
+          imag2
+        </div>
+        <div class="product-crousal-image">
+          imag3
+        </div>
+        <div class="product-crousal-image">
+          imag4
+        </div>
+        <div class="product-crousal-image">
+          imag5
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item bg-secondary">
+      <img src="../../assets/shoping image/img05.jpg" class="d-block w-100" alt="...">
+      <div class="product-crousal">
+        <div class="product-crousal-image">
+          imag
+        </div>
+        <div class="product-crousal-image">
+          imag2
+        </div>
+        <div class="product-crousal-image">
+          imag3
+        </div>
+        <div class="product-crousal-image">
+          imag4
+        </div>
+        <div class="product-crousal-image">
+          imag5
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container-fluid">
+  <h2>Popular Products</h2>
+  <div class="popular-product">
+    <div class="row">
+      <div class="col" *ngFor="let item of productList">
+        <div class="productImg">
+          <img src="{{item.image}}" alt="">
+        </div>
+        <div class="productTitle">
+          {{item.name}}
+        </div>
+        <div class="productDesc">
+          {{item.description}}
+        </div>
+        <div class="productPrice">
+          Price {{item.price | currency}}
+        </div>
+        <div class="productButton">
+          <button class="btn">Buy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,91 +1,36 @@
 {
   "seller": [
     {
-      "id": 1,
-      "name": "Akhil",
-      "email": "akhi1986@hotmail.com",
-      "password": "abc@123"
+      "name": "Akhilesh",
+      "email": "abc@gmail.com",
+      "password": "123456",
+      "id": 1
     },
     {
-      "name": "Anil Siddhu",
-      "email": "abc@gmail.com",
-      "password": "abc@123",
+      "name": "Sunil",
+      "email": "admin@gmail.com",
+      "password": "admin@123456",
       "id": 2
-    },
-    {
-      "email": "pankajmishra@gmail.com",
-      "password": "123456",
-      "id": 3
-    },
-    {
-      "email": "pankajmishra@gmail.com",
-      "password": "123456",
-      "id": 4
-    },
-    {
-      "email": "pankajmishra@gmail.com",
-      "password": "123456",
-      "id": 5
-    },
-    {
-      "email": "pankajmishra@gmail.com",
-      "password": "123456",
-      "id": 6
-    },
-    {
-      "email": "pankajmishra@gmail.com",
-      "password": "123456",
-      "id": 7
-    },
-    {
-      "email": "pankajmishra@gmail.com",
-      "password": "123456",
-      "id": 8
-    },
-    {
-      "email": "pankajmishra@gmail.com",
-      "password": "123456",
-      "id": 9
-    },
-    {
-      "email": "pankajmishra@gmail.com",
-      "password": "123456",
-      "id": 10
-    },
-    {
-      "email": "pankajmishra@gmail.com",
-      "password": "123456",
-      "id": 11
-    },
-    {
-      "email": "pankajmishra@gmail.com",
-      "password": "123456",
-      "id": 12
-    },
-    {
-      "email": "abc@gmail.com",
-      "password": "abc@123",
-      "id": 13
     }
   ],
   "products": [
     {
-      "id": 1,
-      "name": "some comment",
-      "category": "",
-      "subCategory": "",
-      "description": "",
-      "image": "",
-      "price": ""
+      "name": "Samsung Smart Television",
+      "category": "Electronics",
+      "subCategory": "Smart TV TUV",
+      "description": "50'' Smart TV samsung with Netflix, Amazon prime, Hotstar, Android",
+      "image": "assets/food images/img07.jpg",
+      "price": "50000",
+      "id": 5
     },
     {
-      "name": "Samsung",
+      "name": "Hp Laptop 14''",
       "category": "Electronics",
-      "subCategory": "Mobile",
-      "description": "Mobile ohone",
-      "image": "product/mobile/phone",
-      "price": "11000",
-      "id": 2
+      "subCategory": "Computer",
+      "description": "i5 hp laptop ",
+      "image": "assets/food images/img01.jpg",
+      "price": "89000",
+      "id": 6
     }
   ],
   "profile": {

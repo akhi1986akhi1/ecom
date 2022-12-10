@@ -1,8 +1,15 @@
 <nav>
     <h1 routerLink="/"><i class="bi bi-cart4"></i>E-Comm</h1>
     <div *ngIf="menuType === 'default'">
-        <input type="search" placeholder="Search Your product">
-        <button>Search</button>
+        <div class="search-Box">
+            <input type="search" (keyup)="searchProduct($event)" (blur)="hideSearch()" placeholder="Search Your product">
+            <button>Search</button>
+            <ul class="suggestedResult" *ngIf="searchResult">
+                <li *ngFor="let item of searchResult">
+                    <a>{{item.name}}</a>
+                </li>
+            </ul>
+        </div>
     </div>
     <div [ngSwitch]="menuType">
 
@@ -13,11 +20,14 @@
             <li>Cart</li>
         </ul>
         <ul *ngSwitchCase="'seller'">
-            <li routerLink="seller-auth">Seller</li>
+            <li routerLink="seller-login">Seller</li>
             <li routerLink="seller-add-product">Add Product</li>
             <li routerLink="seller-home">List</li>
             <li (click)="logout()">Logout</li>
-            <li style="text-transform:uppercase ;">{{sellerName}}  </li>
+            <li style="text-transform:uppercase ;">
+                <i class="bi bi-person-circle"></i>
+                {{sellerName}}
+            </li>
         </ul>
     </div>
 </nav>

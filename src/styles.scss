@@ -4,3 +4,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+body::-webkit-scrollbar {
+    width: 12px;
+    height:12px;
+    }
+body::-webkit-scrollbar-track {
+    background:linear-gradient(rgb(2, 127, 245),rgb(3, 252, 98),rgb(213, 250, 2),#03a9f4);
+    // border-radius: 20px;
+    }
+body::-webkit-scrollbar-thumb {
+    background-color: goldenrod;
+    border-radius: 20px;
+    }
